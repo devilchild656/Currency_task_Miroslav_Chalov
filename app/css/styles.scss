@@ -1,0 +1,322 @@
+/*****************
+* Global Styles
+*****************/
+
+@mixin box-sizing-border-box() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin flexbox(){
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+@mixin transition($seconds){
+  -webkit-transition: all $seconds ease-in-out;
+  -moz-transition: all $seconds ease-in-out;
+  -ms-transition: all $seconds ease-in-out;
+  -o-transition: all $seconds ease-in-out;
+  transition: all $seconds ease-in-out;
+}
+
+input[type="text"], input[type="submit"], button, select {
+  outline: none;
+  -moz-outline: none;
+  -webkit-outline: none;
+}
+.sucsess{
+  text-align: center;
+  font-size: 14px;
+  width: 100%;
+}
+.center{
+  text-align: center;
+  margin-top: 5px;
+  width: 100%;
+}
+button {
+  width: 100%;
+  height: 40px;
+
+  box-shadow: 0 2px 4px #c7d5ec;
+  border-radius: 100px;
+  background-color: #1c65d5;
+
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  cursor: pointer;
+  border: none;
+
+  @include transition(0ms);
+
+  &:hover {
+    background-color: #154b9e;
+    box-shadow: 0 4px 6px #b4c7e6;
+
+    @include transition(0ms);
+  }
+}
+
+//Set margin and padding to all elements to 0
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  @include box-sizing-border-box;
+  font-family: sans-serif;
+
+  background-image: linear-gradient(135deg, #2670e0 0%, #052bb3 100%);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat;
+}
+
+.responsive-form {
+  width: 550px;
+  height: 100%;
+  margin: 45px auto 0;
+  padding: 30px 40px;
+
+  box-shadow: 0 4px 20px #0e2978;
+  border-radius: 4px;
+  background-color: #ffffff;
+
+  .header-form {
+    color: #0d2039;
+    font-size: 28px;
+    font-weight: 100;
+
+    margin-bottom: 20px;
+  }
+
+  .form-container {
+
+    form {
+
+      label {
+        width: 100%;
+        color: #0d2039;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+      input {
+        @include box-sizing-border-box;
+
+        width: 80%;
+        height: 40px;
+        border-radius: 4px;
+        border: 2px solid #d0dae8;
+        background-color: #ffffff;
+        font-size: 16px;
+        padding-left: 10px;
+        color: #494c51;
+        letter-spacing: 0.7px;
+      }
+
+      select {
+        @include box-sizing-border-box;
+
+        width: 17%;
+        height: 40px;
+        border-radius: 4px;
+        border: 2px solid #d0dae8;
+        background-color: #ffffff;
+
+        option {
+          font-size: 14px;
+        }
+      }
+
+      div {
+        @include flexbox;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+
+        &.target-rate-container {
+          .target-header {
+            color: #1c65d5;
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 30px;
+            text-transform: uppercase;
+
+            display: block;
+            width: 100%;
+          }
+
+          input {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////Extendet class for center text
+//.text-center{
+//  text-align: center;
+//}
+//.text-left{
+//  text-align: left;
+//}
+//.small-padding{
+//  padding: 10px;
+//}
+//
+////Container style
+//.container{
+//  height: 300px;
+//  background: #fff;
+//  border-radius: 20px;
+//  width: 800px;
+//  display: block;
+//  margin: 0 auto;
+//  margin-top: 50px;
+//  padding: 20px;
+//  border: 1px solid black;
+//}
+////Form
+//.form-container{
+//  padding: 10px;
+//  width: 700px;
+//  border: 1px solid black;
+//  margin: 0 auto;
+//  .input-container{
+//      width: 500px;
+//      margin: 0 auto;
+//      @extend .text-left;
+//    .number{
+//      vertical-align: top;
+//      height: 30px;
+//      display: inline-block;
+//      margin: 0.3em auto;
+//      border: none;
+//      border-radius: 0.2em;
+//      font-size: 1.5em;
+//      text-align: center;
+//      box-shadow: 0 0 1em 0.25em rgba(0,0,0,0.2);
+//      @extend .text-left;
+//   }
+//  .currency{
+//    vertical-align: top;
+//    height: 30px;
+//    display: inline-block;
+//    margin: 0.3em auto;
+//    border: none;
+//    border-radius: 0.2em;
+//    font-size: 1.5em;
+//    text-align: center;
+//    box-shadow: 0 0 1em 0.25em rgba(0,0,0,0.2);
+//    @extend .text-left;
+//  }
+//  }
+//  .target-rate-container{
+//    @extend  .input-container
+//
+//  }
+//}
+//
+//
+//.target-header{
+//  @extend .text-center;
+//}
+//.header-form{
+//  @extend .text-center;
+//  padding: 10px;
+//}
+//
+//
+//
+//
+//.slide-animate-container {
+//  position:relative;
+//  background:white;
+//  border:1px solid black;
+//  height:40px;
+//  overflow:hidden;
+//}
+//
+//
+//.slide-animate.ng-enter, .slide-animate.ng-leave {
+//  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+//  position:absolute;
+//  top:0;
+//  left:0;
+//  right:0;
+//  bottom:0;
+//  display:block;
+//  padding:10px;
+//}
+//
+//.slide-animate.ng-enter {
+//  top:-50px;
+//}
+//.slide-animate.ng-enter.ng-enter-active {
+//  top:0;
+//}
+//
+//.slide-animate.ng-leave {
+//  top:0;
+//}
+//.slide-animate.ng-leave.ng-leave-active {
+//  top:50px;
+//}
+//.tabsdemoDynamicHeight md-content {
+//  background-color: transparent !important; }
+//.tabsdemoDynamicHeight md-content md-tabs {
+//  background: #f6f6f6;
+//  border: 1px solid #e1e1e1; }
+//.tabsdemoDynamicHeight md-content md-tabs md-tabs-canvas {
+//  background: white; }
+//.tabsdemoDynamicHeight md-content h1:first-child {
+//  margin-top: 0; }

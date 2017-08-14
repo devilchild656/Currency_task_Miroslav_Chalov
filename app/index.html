@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="currencyApp">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--Meta data for the app-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--fonts-->
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<!--Styles for app-->
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<link rel="stylesheet" href="css/typography.css" type="text/css">
+<!--Libraries for the app-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.js" type="text/javascript"></script>
+<script src="../app/js/bower_components/angular-animate/angular-animate.js" type="text/javascript"></script>
+<!--Angular app-->
+<script src="../app/controllers/app.js" type="text/javascript"></script>
+
+<!--Controllers for the app-->
+
+<!--Views-->
+<script src="../app/controllers/views-controller.js" type="text/javascript"></script>
+<!--Validation and Check Fields-->
+<script src="controllers/form-controller.js" type="text/javascript"></script>
+<!--Send Rates-->
+<script src="controllers/http-request.js" type="text/javascript"></script>
+
+
+
+<body>
+<div class="container" ng-controller="formView" >
+    <div class="slide-animate" ng-include="templates.url"></div>
+</div>
+
+</body>
+</html>
